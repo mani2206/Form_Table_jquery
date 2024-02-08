@@ -1,0 +1,46 @@
+@import './abstracts/variable';
+@import './abstracts/common';
+@import './mixins/breakpoints';
+// start form style
+body{
+    @include print-styles($font-bold);
+    @include media-min-md{
+        background: url(../../public/images/animate.gif) no-repeat ;
+        // background: violet;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    } 
+}
+.form-section{
+    @include media-min-xl{
+        width: 60%;
+        margin: auto;
+    }
+    .container{
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(255,255,255,.1 );
+        @include media-min-md{
+            border-radius: 20px;
+            padding: 20px 30px;
+            margin: 20px 0px;
+        }
+        h2{
+            @include media-min-md{
+                color: $white;
+            }
+        }
+        form{
+            .form-label{
+                @include print-styles($font-bold);
+                @include media-min-md{
+                    color: $white;
+                }
+            }
+        } 
+    }   
+}
+// end form style
+

@@ -1,0 +1,32 @@
+$white:white;
+$black:black;
+$ghost:ghostwhite;
+$green:green;
+$red:red;
+// font family
+$font-family: Georgia, 'Times New Roman', Times, serif;
+$font-light: (
+    font-family: $font-family,
+    font-weight: 200,
+);
+$font-regular: (
+    font-family: $font-family,
+    font-weight: 300,
+);
+$font-medium: (
+    font-family: $font-family,
+    font-weight: 400,
+);
+$font-medium-bold: (
+    font-family: $font-family,
+    font-weight: 600,
+);
+$font-bold: (
+    font-family: $font-family,
+    font-weight: 700,
+);
+@mixin print-styles($map) {
+    @each $property, $value in $map {
+        #{$property}: $value;
+    }
+}
